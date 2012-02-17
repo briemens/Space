@@ -1,0 +1,64 @@
+body {
+    font-size: 2em;
+}
+
+#container {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.starfield {
+    position: relative;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    -webkit-transform: translateZ(0);
+}
+
+@media (max-device-width: 480px) {
+    body {
+        font-size: 70%;
+    }
+
+    .starfield {
+    }
+}
+
+.star {
+    position: absolute;
+    right: -10%;
+    color: white;
+    float: left;
+}
+
+.starfield.ready .large.star,
+.star.size1 {
+    font-size: 1.2em;
+    /*text-shadow: 1px 0px 1px blue, 3px 0px 3px lightsteelblue, 7px 0px 7px white, 10px 0px 10px white;*/
+    z-index: 3;
+}
+
+.starfield.ready .medium.star,
+.star.size2 {
+    font-size: .75em;
+    /*text-shadow: 1px 0px 1px yellow, 3px 0px 3px white, 7px 0px 7px yellow;*/
+    color: silver;
+    z-index: 2;
+}
+
+.starfield.ready .small.star,
+.star.size3 {
+    font-size: .5em;
+    /*text-shadow: 1px 0px 1px #555, 3px 0px 3px #777;*/
+    color: #555;
+    z-index: 1;
+}
+
+.star.fly {
+    right: 110%;
+    display: block;
+}
